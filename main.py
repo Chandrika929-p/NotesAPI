@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 
 app = FastAPI()
 
-app.mount("/frontend", StaticFiles(directory="frontend",html=True), name="frontend")
+app.mount("/", StaticFiles(directory="frontend",html=True), name="frontend")
 
 models.Base.metadata.create_all(bind=engine)
 
