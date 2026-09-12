@@ -50,3 +50,5 @@ def delete_note(db,note_id):
         )
     db.delete(note)
     db.commit()
+
+

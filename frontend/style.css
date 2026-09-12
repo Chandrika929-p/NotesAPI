@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff7ed;
+    color: #172033;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 45px auto;
+}
+
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 46px;
+    color: #f97316;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+
+/* Search */
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+#search-btn {
+    background: #f97316;
+    color: white;
+}
+
+#show-all-btn {
+    background: #e2e8f0;
+    color: #172033;
+}
+
+#search-btn:hover,
+#show-all-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Forms */
+
+.note-form,
+.edit-form {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    border: 2px solid #fed7aa;
+    box-shadow: 0 12px 30px rgba(249, 115, 22, 0.12);
+}
+
+.note-form h2,
+.edit-form h2,
+.notes-section h2 {
+    color: #172033;
+    margin-bottom: 20px;
+}
+
+
+/* Inputs */
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #fb923c;
+}
+
+textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+
+/* Add Button */
+
+#add-note-btn {
+    width: 100%;
+    padding: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #f97316,
+        #fb7185
+    );
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+#add-note-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Edit Form */
+
+.edit-form {
+    display: none;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+}
+
+#save-edit-btn {
+    background: #f97316;
+    color: white;
+}
+
+#cancel-edit-btn {
+    background: #ffe4e6;
+    color: #e11d48;
+}
+
+
+/* Notes */
+
+#notes-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(260px, 1fr)
+    );
+
+    gap: 22px;
+}
+
+
+/* Note Card */
+
+.note-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 18px;
+
+    border-top: 6px solid #f97316;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.08);
+
+    transition: 0.3s;
+}
+
+.note-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 30px rgba(249, 115, 22, 0.15);
+}
+
+.note-card h3 {
+    color: #ea580c;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.note-card p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+
+    white-space: pre-wrap;
+}
+
+
+/* Buttons */
+
+.note-actions {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    padding: 10px 18px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.edit-btn {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.delete-btn {
+    background: #ffe4e6;
+    color: #e11d48;
+}
+
+.edit-btn:hover {
+    background: #fde68a;
+}
+
+.delete-btn:hover {
+    background: #fecdd3;
+}
+
+
+/* Empty State */
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    border: 2px dashed #fdba74;
+}
+
+.empty-state h3 {
+    color: #ea580c;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    color: #64748b;
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input {
+        margin-bottom: 0;
+    }
+
+    .edit-actions {
+        flex-direction: column;
+    }
+
+}

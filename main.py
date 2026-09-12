@@ -3,9 +3,12 @@ import crud
 import schema
 from database import engine, get_db
 from fastapi import FastAPI,Depends
+from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import Session
 
 app = FastAPI()
+
+app.mount("/frontend", StaticFiles(directory="frontend",html=True), name="frontend")
 
 models.Base.metadata.create_all(bind=engine)
 

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notes App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <header>
+            <h1>My Notes 📝</h1>
+            <p>Keep your thoughts organized</p>
+        </header>
+
+
+        <!-- Search -->
+
+        <section class="search-box">
+
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search notes by title..."
+            >
+
+            <button id="search-btn">
+                Search
+            </button>
+
+            <button id="show-all-btn">
+                Show All
+            </button>
+
+        </section>
+
+
+        <!-- Add Note -->
+
+        <section class="note-form">
+
+            <h2>Add a Note</h2>
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Enter note title"
+            >
+
+            <textarea
+                id="content"
+                placeholder="Write your note..."
+            ></textarea>
+
+            <button id="add-note-btn">
+                Add Note
+            </button>
+
+        </section>
+
+
+        <!-- Edit Note -->
+
+        <section id="edit-form" class="edit-form">
+
+            <h2>Edit Note</h2>
+
+            <input
+                type="text"
+                id="edit-title"
+                placeholder="Note title"
+            >
+
+            <textarea
+                id="edit-content"
+                placeholder="Note content"
+            ></textarea>
+
+            <div class="edit-actions">
+
+                <button id="save-edit-btn">
+                    Save Changes
+                </button>
+
+                <button id="cancel-edit-btn">
+                    Cancel
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Notes -->
+
+        <section class="notes-section">
+
+            <h2>Your Notes</h2>
+
+            <div id="notes-container">
+
+                <!-- JavaScript will display notes here -->
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
